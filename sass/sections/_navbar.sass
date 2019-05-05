@@ -1,0 +1,154 @@
+.navbar
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background-color: #fff
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-height: 80px
+    background-color: #fff
+
+.menu
+  &-button
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: transparent
+    border: none
+    border-right: 1px solid  rgba(#510bba, 0.1)
+    border-left: 1px solid rgba(#510bba, 0.1)
+    height: 80px
+    width: 70px
+    cursor: pointer
+    &_line
+      display: block
+      width: 20px
+      height: 3px
+      background-color: #507fe1
+      margin-top: 3px
+      margin-bottom: 3px
+
+.navbar-logo
+  
+.logo
+  display: block
+  font-size: 18px
+  font-weight: 700
+  text-transform: uppercase
+  color: #262626
+  +bold
+  margin-bottom: 5px
+  &-descr
+    display: block
+    color: #6b6b6b
+    font-size: 14px
+    font-weight: 300
+    +light
+.navbar
+  &-phone
+    display: block
+    color: #1c1c1c
+    font-size: 19px
+    font-weight: 400
+    text-transform: uppercase
+    +bold
+    text-decoration: none
+    margin-bottom: 5px
+  &-descr
+    display: block
+    color: #7b7b79
+    font-size: 14px
+    font-weight: 300
+    +light
+    margin-left: 22px
+    text-decoration: none
+  &-city_phone
+    margin-right: 50px
+  &-email
+    margin-left: 70px
+  &-button
+   font-size: 12px
+   font-weight: 400
+   text-transform: uppercase
+   +bold
+   padding: 15px 20px
+   border: 2px solid #507fe1
+   color: #507fe1
+   background: #ffffff
+   cursor: pointer
+   &:hover
+     background: #507fe1
+     color:#ffffff
+.menu
+  position: fixed
+  background-color: #4370ce
+  padding: 15px 0
+  width: 100%
+  top: 80px
+  width: 100%
+  left: 0
+  transform: translateY(-100%)
+  transition: 0.2s
+  z-index: -1
+  
+
+ 
+  &-link
+    text-decoration: none
+    color: #ffffff
+    font-size: 17px
+    font-weight: 300
+    line-height: 25px
+    text-transform: uppercase
+    +light
+  &-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+  
+@media  (max-width: 1199px)
+  .logo , .navbar-phone
+    font-size: 16px
+  .navbar-descr
+    margin-left: 0
+  
+@media  (max-width: 991px)
+  .navbar-city_phone
+    display: none
+
+@media  (max-width: 768px)
+  .navbar-mobile
+    display: none
+  
+
+@media  (max-width: 576px)
+  .navbar-mobile
+    display: none
+  .navbar-button
+    font-size: 10px
+    padding: 10px 15px
+@media (max-width: 530px)
+  .logo
+    font-size: 12px
+    &-descr
+      display: none
+@media (max-width: 460px)
+  .logo
+    display: none
+  
+    
+
+    
+   
+
+   
+   
+    
+    
+
+
+    
