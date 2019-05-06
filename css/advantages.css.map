@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACG,AAAD,gBAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "../sass/sections/advantages.sass"
+    ],
+    "names": [],
+    "file": "advantages.css"
+}
