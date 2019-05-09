@@ -1,0 +1,26 @@
+.production-block
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 100px
+  &__img
+    margin-right: 70px
+  &__descr
+    max-width: 500px
+    color: #000000
+    font-size: 18px
+    font-weight: 300
+    line-height: 31px
+    +light
+@media (max-width: 991px)
+  .production-block
+    flex-direction: column
+    &__img
+      margin-right: 0
+      margin-bottom: 30px
+@media (max-width: 576px)
+  .production-block
+    &__img
+      max-width: 100%
+    &__descr
+      max-width: 100%

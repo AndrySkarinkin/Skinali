@@ -1,0 +1,32 @@
+.contacts
+  background: $grey
+.contact-block
+  display: flex
+  justify-content: center
+  text-align: center
+  &-img
+    height: 45px
+    margin-bottom: 25px
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin: 0 70px
+    &-descr
+      color: #000000
+      font-size: 16px
+      font-weight: 300
+      margin-bottom: 50px
+      +light
+
+@media (max-width: 991px)
+  .contact-block
+    justify-content: space-between
+    &__item
+      margin: 0
+@media (max-width: 768px)
+  .contact-block
+    flex-direction: column
+    &-img
+      margin-bottom: 0

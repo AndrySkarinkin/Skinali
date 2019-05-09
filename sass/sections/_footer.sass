@@ -1,0 +1,75 @@
+.footer
+  background-color: #262626
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 40px 20px
+    &__info
+      &-title
+        color: #ffffff
+        font-size: 18px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.54px
+        margin-bottom: 10px
+        +bold
+      &-subtitle
+        color: #ffffff
+        font-size: 14px
+        font-weight: 300
+        margin-bottom: 50px
+      &-brend
+        color: #767676
+        font-size: 14px
+        font-weight: 300
+    &__pay
+      &-img
+        margin-right: 20px
+        &:last-child
+          margin-right: 0
+    &__contacts
+      display: flex
+      flex-direction: column
+      text-align: right
+      &-phone
+        text-decoration: none
+        color: #ffffff
+        font-size: 20px
+        font-weight: 400
+        text-transform: uppercase
+        margin-bottom: 20px
+        +bold
+      &-email
+        text-decoration: none
+        border-bottom: 1px solid #ffffff
+        color: #ffffff
+        font-size: 16px
+        font-weight: 300
+        line-height: 25px
+        +light
+        &-wrapper
+          margin-bottom: 20px
+      &-social
+        &-item
+          height: 25px
+          width: 25px
+          margin-right: 15px
+          &:last-child
+            margin-right: 0
+@media (max-width: 768px)
+  .footer
+    &-block
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__info
+        text-align: center
+        margin-bottom: 30px
+        &-subtitle
+          margin-bottom: 10px
+      &__pay
+        margin-bottom: 30px
+      &__contacts
+        text-align: center
+       

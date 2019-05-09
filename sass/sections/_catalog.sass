@@ -1,0 +1,115 @@
+.catalog
+  background: $grey
+  padding-bottom: 100px
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__item
+    position: relative
+    max-width: 570px
+    margin-bottom: 30px
+    &__img
+      display: block
+    &__buttons
+      display: block
+      position: absolute
+      bottom: 0
+      right: 0
+      display: flex
+      align-items: center
+    &-title
+      position: absolute
+      top: 10px
+      left: 10px
+      display: inline-block
+      color: #ffffff
+      font-size: 12px
+      font-weight: 400
+      text-transform: uppercase
+      +light
+      padding: 10px
+      background-color: #507fe1
+      opacity: 0.6
+  &-button
+    margin-bottom: 25px
+  &__button-wrap
+    text-align: center
+    margin: 30px 0
+  &__footer
+    color: #000000
+    font-size: 16px
+    font-weight: 300
+    +light
+.try
+  color: #6a99e9
+  font-size: 11px
+  font-weight: 400
+  text-transform: uppercase
+  color: #507fe1
+  +light
+  padding: 10px
+  background-color: #ffffff
+  border: none
+  cursor: pointer
+.order
+  color: #6a99e9
+  font-size: 11px
+  font-weight: 400
+  text-transform: uppercase
+  color: #ffffff
+  +light
+  background-color: #6a99e9
+  padding: 10px
+  border: none
+  cursor: pointer
+.like
+  background-color: #417cde
+  height: 32px
+  width: 32px
+  border: none
+  cursor: pointer
+
+@media (max-width: 1199px)
+  .catalog
+    &__item
+      &__img
+        max-width: 450px
+@media  (max-width: 991px) and (min-width: 769px)
+  .catalog
+    padding-bottom: 50px
+    &__item
+      &-title
+        padding: 5px
+      &__img
+        max-width: 360px
+  .try, .order
+    padding: 5px
+  .like
+    width: 22px
+    height: 22px
+@media  (max-width: 768px)
+  .catalog
+    padding-bottom: 50px
+    &-wrap
+      justify-content: center
+    &__item
+      &__img
+        max-width: 550px
+@media (max-width: 576px)
+  .catalog
+    &__item
+      &__img
+        max-width: 100%
+      &-title
+        padding: 5px
+  .try, .order
+    padding: 5px
+  .like
+    width: 22px
+    height: 22px
+
+  
+  
+
+

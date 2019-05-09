@@ -1,0 +1,65 @@
+.view
+  margin-bottom: 100px
+  &-button
+    
+    &__wrap
+      position: absolute
+      text-align: center
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05)
+      height: 80px
+      bottom: 0
+      left: 0
+      width: 100%
+      z-index: -1
+      background: #fff
+  &-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-item
+    cursor: pointer
+    position: relative
+    background: #ffffff
+    position: relative
+    flex-direction: 25%
+    margin-bottom: 20px
+    &__descr
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 10px 20px 
+      &-title
+        color: #000000
+        font-size: 15px
+        font-weight: 300
+        +light
+      &-price
+        color: #000000
+        font-size: 15px
+        font-weight: 400
+        line-height: 30px
+        +bold
+    &:hover
+      .view-button__wrap
+        z-index: 99
+        bottom: -80px
+
+@media (max-width: 1199px) 
+  .view
+    &-wrap
+    &-item
+      &__descr
+        padding: 10px
+      &__img
+        max-width: 230px
+@media (max-width: 991px)
+  .view
+    &-wrap
+      justify-content: center
+    &-item
+      margin: 10px
+@media (max-width: 768px)
+  .view
+    &-item
+      &__img
+        max-width: 260px

@@ -1,0 +1,94 @@
+.second-form-wrap
+  background: #ffffff url('../../img/second-form-img.png') no-repeat center  right
+  background-size: contain
+  padding: 60px
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+  margin-top: -200px
+.second-form
+  &__title
+    color: #000000
+    font-size: 25px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 0.75px
+    margin-bottom: 30px
+    +bold
+  &__subtitle
+    color: #000000
+    font-size: 21px
+    font-weight: 300
+    +light
+    margin-bottom: 40px
+    max-width: 830px
+  &-first-row
+    display: flex
+    max-width: 900px
+    &__input
+      flex-basis: 33%
+      width: 100%
+      padding: 30px
+      margin-bottom: 30px
+      border: 1px solid #dddddd
+  &-second-row
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  &__button
+    padding: 30px
+    cursor: pointer
+    border: none
+    background-color: #507fe1
+    color: #ffffff
+    font-size: 15px
+    font-weight: 400
+    text-transform: uppercase
+    margin-right: 40px
+    +bold
+  &__input-descr
+    color: #596164
+    font-size: 17px
+    font-weight: 300
+    +light
+
+@media (max-width: 1199px)
+  .second-form-wrap
+    background-position: center right -90px
+  .second-form
+    &__subtitle
+      max-width: 750px
+@media (max-width: 991px)
+  .second-form-wrap
+    background: #ffffff
+    padding: 40px
+@media (max-width: 768px)
+  .second-form
+    &-first-row
+      flex-wrap: wrap
+      &__input
+        flex-basis: 100%
+    &-second-row
+      flex-direction: column
+    &__button
+      margin-right: 0
+      margin-bottom: 30px
+    &__input-descr
+      text-align: center
+@media (max-width: 576px)
+  .second-form-wrap
+    padding: 40px 30px
+  .second-form
+    &__title
+      font-size: 18px
+      text-align: center
+    &__subtitle
+      font-size: 16px
+    &__button
+      padding: 15px
+      font-size: 12px
+
+
+
+
+
+
+
