@@ -25,6 +25,8 @@
     height: 80px
     width: 70px
     cursor: pointer
+    &:focus
+      outline: none
     &_line
       display: block
       width: 20px
@@ -93,8 +95,13 @@
   width: 100%
   left: 0
   transform: translateY(-100%)
-  transition: 0.2s
+  transition: 0.5s
   z-index: -1
+  &-active
+    z-index: 1
+    transition: 0.5s
+    transform: translateY(0)
+    opacity: 0.9
   
 
  
@@ -110,6 +117,8 @@
     display: flex
     align-items: center
     justify-content: space-between
+    a:hover
+      color: black
   
 @media  (max-width: 1199px)
   .logo , .navbar-phone
@@ -120,6 +129,19 @@
 @media  (max-width: 991px)
   .navbar-city_phone
     display: none
+  .menu
+    &-nav
+      flex-direction: column
+      justify-content: center
+      a
+        margin-bottom: 30px
+        &:hover
+          color: black
+         
+   
+    
+   
+
 
 @media  (max-width: 768px)
   .navbar-mobile

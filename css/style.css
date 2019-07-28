@@ -43,6 +43,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Proxima Nova Light, sans-serif;
 }
@@ -116,6 +120,108 @@ section {
   }
 }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -160,6 +266,10 @@ section {
   height: 80px;
   width: 70px;
   cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none;
 }
 
 .menu-button_line {
@@ -245,9 +355,18 @@ section {
   left: 0;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: -1;
+}
+
+.menu-active {
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0.9;
 }
 
 .menu-link {
@@ -272,6 +391,10 @@ section {
           justify-content: space-between;
 }
 
+.menu-nav a:hover {
+  color: black;
+}
+
 @media (max-width: 1199px) {
   .logo, .navbar-phone {
     font-size: 16px;
@@ -284,6 +407,21 @@ section {
 @media (max-width: 991px) {
   .navbar-city_phone {
     display: none;
+  }
+  .menu-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu-nav a {
+    margin-bottom: 30px;
+  }
+  .menu-nav a:hover {
+    color: black;
   }
 }
 
@@ -319,7 +457,7 @@ section {
 }
 
 .hero {
-  background: #f1f1f1 url("../../img/main-img.png") no-repeat center top;
+  background: #f1f1f1 url("../img/main-img.png") no-repeat center top;
   background-size: contain;
   padding-top: 80px;
   padding-bottom: 220px;
@@ -407,7 +545,7 @@ section {
 }
 
 .offer-block {
-  background: #ffffff url("../../img/form-img.png") no-repeat center right -50px;
+  background: #ffffff url("../img/form-img.png") no-repeat center right -50px;
   background-size: contain;
   padding: 80px;
   padding-left: 80px;
@@ -634,9 +772,17 @@ section {
 }
 
 .catalog__item {
+  cursor: pointer;
   position: relative;
   max-width: 570px;
   margin-bottom: 30px;
+  overflow-y: hidden;
+}
+
+.catalog__item:hover .catalog__item__buttons {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .catalog__item__img {
@@ -644,6 +790,11 @@ section {
 }
 
 .catalog__item__buttons {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: block;
   position: absolute;
   bottom: 0;
@@ -688,6 +839,8 @@ section {
 }
 
 .try {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   color: #6a99e9;
   font-size: 11px;
   font-weight: 400;
@@ -1143,7 +1296,7 @@ section {
 }
 
 .second-form-wrap {
-  background: #ffffff url("../../img/second-form-img.png") no-repeat center right;
+  background: #ffffff url("../img/second-form-img.png") no-repeat center right;
   background-size: contain;
   padding: 60px;
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
